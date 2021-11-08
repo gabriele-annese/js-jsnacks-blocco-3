@@ -22,110 +22,105 @@ const player = {
     media: '',
     successi: '',
 }
-console.log(player);
 // array 10 giocatori
 const players = [
     {
-        codice: '', 
+        codice: `${lettere(3)+ numeri(3)}`, 
         nome: 'mario',
         cognome: 'giordano',
-        etá: 50,
-        media: '',
-        successi: '',
+        eta: `${genRandom(18, 40)}`,
+        media: `${genRandom(0, 50)}`,
+        successi: `${genRandom(0, 100)}`,
     },
     {
-        codice: '', 
+        codice: `${lettere(3)+ numeri(3)}`, 
         nome: 'matteo',
         cognome: 'salvini',
-        etá: 50,
-        media: '',
-        successi: '',
+        eta: `${genRandom(18, 40)}`,
+        media: `${genRandom(0, 50)}`,
+        successi: `${genRandom(0, 100)}`,
     },
     {
-        codice: '', 
+        codice: `${lettere(3)+ numeri(3)}`, 
         nome: 'enzo',
         cognome: 'miccio',
-        etá: 50,
-        media: '',
-        successi: '',
+        eta: `${genRandom(18, 40)}`,
+        media: `${genRandom(0, 50)}`,
+        successi: `${genRandom(0, 100)}`,
     },
     {
-        codice: '', 
+        codice: `${lettere(3)+ numeri(3)}`, 
         nome: 'vittorio',
         cognome: 'sgarbi',
-        etá: 50,
-        media: '',
-        successi: '',
+        eta: `${genRandom(18, 40)}`,
+        media: `${genRandom(0, 50)}`,
+        successi: `${genRandom(0, 100)}`,
     },
     {
-        codice: '', 
+        codice: `${lettere(3)+ numeri(3)}`, 
         nome: 'fabrizio',
         cognome: 'corona',
-        etá: 50,
-        media: '',
-        successi: '',
+        etá: `${genRandom(18, 40)}`,
+        media: `${genRandom(0, 50)}`,
+        successi: `${genRandom(0, 100)}`,
     },
     {
-        codice: '', 
+        codice: `${lettere(3)+ numeri(3)}`, 
         nome: 'denis',
         cognome: 'dosio',
-        etá: 50,
-        media: '',
-        successi: '',
+        eta: `${genRandom(18, 40)}`,
+        media: `${genRandom(0, 50)}`,
+        successi: `${genRandom(0, 100)}`,
     },
     {
-        codice: '', 
+        codice: `${lettere(3)+ numeri(3)}`, 
         nome: 'maria',
         cognome: 'de filippi',
-        etá: 50,
-        media: '',
-        successi: '',
+        eta: `${genRandom(18, 40)}`,
+        media: `${genRandom(0, 50)}`,
+        successi: `${genRandom(0, 100)}`,
     },
     {
-        codice: '', 
+        codice: `${lettere(3)+ numeri(3)}`, 
         nome: 'barbara',
         cognome: 'd usrso',
-        etá: 50,
-        media: '',
-        successi: '',
+        eta: `${genRandom(18, 40)}`,
+        media: `${genRandom(0, 50)}`,
+        successi: `${genRandom(0, 100)}`,
     },
     {
-        codice: '', 
+        codice: `${lettere(3)+ numeri(3)}`, 
         nome: 'er',
         cognome: 'lucertola',
-        etá: 50,
-        media: '',
-        successi: '',
+        eta: `${genRandom(18, 40)}`,
+        media: `${genRandom(0, 50)}`,
+        successi: `${genRandom(0, 100)}`,
     },
     {
-        codice: '', 
+        codice: `${lettere(3)+ numeri(3)}`, 
         nome: 'francesca',
         cognome: 'cipriani',
-        etá: 50,
-        media: '',
-        successi: '',
+        eta: `${genRandom(18, 40)}`,
+        media: `${genRandom(0, 50)}`,
+        successi: `${genRandom(0, 100)}`,
     },
 ];
 console.log(players)
 
-
-
 // media
 const mediaRandom = genRandom(0, 50);
 // aggiungere media all oggetto
-player.media = mediaRandom
-console.log(player)
+players.media = mediaRandom
+
 // sucessi
-const successiRandom = genRandom(0, 100);
+const successiRandom =genRandom(0, 100);
 // aggiungere media all ogetto
-player.successi = successiRandom
-console.log(player)
+players.successi = successiRandom
 
 // creare array 3 numeri
 const codiceRandom = lettere(3)+ numeri(3)
-console.log(codiceRandom)
 player.codice = codiceRandom;
-console.log(player)
+players.codice = codiceRandom;
 // creare nodo html
 const playerPrint = document.querySelector('.player') 
 playerPrint.innerHTML+= `
@@ -136,10 +131,23 @@ playerPrint.innerHTML+= `
     </div>`
 
 
+
+// creare un array con i player che hanno media superiore a 35 e la percentuale di successo per i tiri da 3 punti superiore all’80%
+const playersTop =[];
+
+playersMedia = players.map( (element) =>{
+    let verificaMedia = element.media = parseInt(element.media);
+    let verificaSucessi = element.successi = parseInt(element.successi);
+    if (( verificaMedia > 35) && (verificaSucessi > 80)) {
+        playersTop.push(element)
+    }
+    return playersTop
+})
+console.log(playersTop)
 // ************************FUNZIONI*******************//
 function genRandom(min, max) {
-    return Math.floor(Math.random() * (max - min) ) + min;
-  }
+    return parseInt(Math.floor(Math.random() * (max - min) ) + min);
+}
 
 
   function lettere(length) {
