@@ -34,7 +34,35 @@ const successiRandom = genRandom(0, 100);
 player.successi = successiRandom
 console.log(player)
 
+// creare array 3 numeri
+const codiceRandom = lettere(3)+ numeri(3)
+console.log(codiceRandom)
+player.codice = codiceRandom;
+console.log(player)
+
 // ************************FUNZIONI*******************//
 function genRandom(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
   }
+
+
+  function lettere(length) {
+    let result= '';
+    const characters= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const charactersLength = characters.length;
+    for ( let i = 0; i < length; i++ ) {
+       result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+ }
+
+ function numeri(length) {
+    let result= '';
+    const characters= '0123456789';
+    const charactersLength = characters.length;
+    for ( let i = 0; i < length; i++ ) {
+       result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+ }
+
