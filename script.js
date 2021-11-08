@@ -23,6 +23,93 @@ const player = {
     successi: '',
 }
 console.log(player);
+// array 10 giocatori
+const players = [
+    {
+        codice: '', 
+        nome: 'mario',
+        cognome: 'giordano',
+        etá: 50,
+        media: '',
+        successi: '',
+    },
+    {
+        codice: '', 
+        nome: 'matteo',
+        cognome: 'salvini',
+        etá: 50,
+        media: '',
+        successi: '',
+    },
+    {
+        codice: '', 
+        nome: 'enzo',
+        cognome: 'miccio',
+        etá: 50,
+        media: '',
+        successi: '',
+    },
+    {
+        codice: '', 
+        nome: 'vittorio',
+        cognome: 'sgarbi',
+        etá: 50,
+        media: '',
+        successi: '',
+    },
+    {
+        codice: '', 
+        nome: 'fabrizio',
+        cognome: 'corona',
+        etá: 50,
+        media: '',
+        successi: '',
+    },
+    {
+        codice: '', 
+        nome: 'denis',
+        cognome: 'dosio',
+        etá: 50,
+        media: '',
+        successi: '',
+    },
+    {
+        codice: '', 
+        nome: 'maria',
+        cognome: 'de filippi',
+        etá: 50,
+        media: '',
+        successi: '',
+    },
+    {
+        codice: '', 
+        nome: 'barbara',
+        cognome: 'd usrso',
+        etá: 50,
+        media: '',
+        successi: '',
+    },
+    {
+        codice: '', 
+        nome: 'er',
+        cognome: 'lucertola',
+        etá: 50,
+        media: '',
+        successi: '',
+    },
+    {
+        codice: '', 
+        nome: 'francesca',
+        cognome: 'cipriani',
+        etá: 50,
+        media: '',
+        successi: '',
+    },
+];
+console.log(players)
+
+
+
 // media
 const mediaRandom = genRandom(0, 50);
 // aggiungere media all oggetto
@@ -47,7 +134,6 @@ playerPrint.innerHTML+= `
         <h3> cognome: ${player.cognome}</h3>
         <h3>codice player:${player.codice}</h3>
     </div>`
-
 
 
 // ************************FUNZIONI*******************//
