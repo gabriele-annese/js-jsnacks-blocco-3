@@ -1,0 +1,9 @@
+body{
+    background-color: black;
+    color: #fff;
+}
+
+.container{
+    margin: 50 auto;
+    text-align: center;
+}

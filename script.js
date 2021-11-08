@@ -140,8 +140,15 @@ playersMedia = players.map( (element) =>{
     let verificaSucessi = element.successi = parseInt(element.successi);
     if (( verificaMedia > 35) && (verificaSucessi > 80)) {
         playersTop.push(element)
+        const topPlayer= document.querySelector('.topPlayer')
+        topPlayer.innerHTML+= `
+            <div>
+                <h3>Nome: ${element.nome}</h3>
+                <h3> cognome: ${element.cognome}</h3>
+                <h3>codice player:${element.codice}</h3>
+            </div>`
     }
-    return playersTop
+    return 
 })
 console.log(playersTop)
 // ************************FUNZIONI*******************//
