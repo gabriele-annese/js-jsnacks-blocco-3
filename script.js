@@ -20,13 +20,18 @@ const player = {
     cognome: 'giordano',
     etá: 50,
     media: '',
-    sucessi: '',
+    successi: '',
 }
 console.log(player);
 // media
 const mediaRandom = genRandom(0, 50);
 // aggiungere media all oggetto
 player.media = mediaRandom
+console.log(player)
+// sucessi
+const successiRandom = genRandom(0, 100);
+// aggiungere media all ogetto
+player.successi = successiRandom
 console.log(player)
 
 // ************************FUNZIONI*******************//
