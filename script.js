@@ -39,6 +39,16 @@ const codiceRandom = lettere(3)+ numeri(3)
 console.log(codiceRandom)
 player.codice = codiceRandom;
 console.log(player)
+// creare nodo html
+const playerPrint = document.querySelector('.player') 
+playerPrint.innerHTML+= `
+    <div>
+        <h3>Nome: ${player.nome}</h3>
+        <h3> cognome: ${player.cognome}</h3>
+        <h3>codice player:${player.codice}</h3>
+    </div>`
+
+
 
 // ************************FUNZIONI*******************//
 function genRandom(min, max) {
